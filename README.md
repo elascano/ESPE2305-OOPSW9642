@@ -1,2 +1,2 @@
 # ESPE2305-OOPSW9642
-ESPE class of Object-Oriented Programming May 2023
+ESPE Object-Oriented Programming class for May 2023

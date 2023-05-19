@@ -4,52 +4,55 @@ import java.util.Date;
 
 /**
  *
- * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
+ * @author Tipan Leonel, Code Warriors, DCCO-ESPE
  */
 public class Chicken {
+
     private int id;
     private String name;
     private String color;
     private int age;
     private boolean isMolting;
     private Date bornOnDate;
-
-    @Override
-    public String toString() {
-        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + ", bornOnDate=" + bornOnDate + '}';
-    }
     
-    public void doStuff (int forTime){
+    @Override
+    public String toString(){
+        return "Chicken" + "id=" + id + ",name=" +name +", color="+ color +", age="+age+", isMolting="+ isMolting+"bornOnDate="+ bornOnDate;
+        
+    }
+          
+
+    public void doStuff(int fortime) {
         
         eat();
         poop();
         layAnEgg();
+
     }
-    
-    private void cluck(){
-            System.out.println("chicken is clucking ...");
+
+    private void cluck() {
+        System.out.println("Chicken is clucking...");
     }
-    
-    private void wander(){
-            System.out.println("chicken is wandering ...");
+
+    private void wander() {
+        System.out.println("Chicken is wondering...");
     }
-    
-    private void eat(){
-            System.out.println("chicken is eating ...");
+
+    private void eat() {
+        System.out.println("Chicken is eating...");
     }
-    
-    private void drink(){
-            System.out.println("chicken is drinking ...");
+
+    private void drink() {
+        System.out.println("Chicken is drinking...");
     }
-    
+
     private Poop poop(){
-            System.out.println("chicken is pooping ...");
-            return new Poop();
+        System.out.println("Chicken is pooping...");
+        return new Poop();
     }
-    
     private Egg layAnEgg(){
-            System.out.println("chicken is laying an egg ...");
-            return new Egg();
+        System.out.println("Chicken is laying an egg...");
+        return new Egg();
     }
 
     /**
@@ -135,4 +138,5 @@ public class Chicken {
     public void setBornOnDate(Date bornOnDate) {
         this.bornOnDate = bornOnDate;
     }
+            
 }

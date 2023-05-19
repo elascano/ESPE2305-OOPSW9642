@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  *
- * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
+ * @author Leonardo Narvaez, JSons; DCCO-ESPE
  */
 public class FarmSimulator {
     public static void main(String[] args) {
@@ -17,9 +17,9 @@ public class FarmSimulator {
         
         chicken = new Chicken();
         chicken.doStuff(0);
-        chicken.setName("Mesias");
-        chicken.setColor("pink and red");
-        chicken.setAge(21);
+        chicken.setName("Leonardo");
+        chicken.setColor("Black and green");
+        chicken.setAge(19);
         chicken.setIsMolting(true);
         chicken.setBornOnDate(new Date());
         System.out.println("this chicken is " + chicken);

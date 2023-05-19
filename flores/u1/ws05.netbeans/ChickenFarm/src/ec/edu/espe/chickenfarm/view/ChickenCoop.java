@@ -7,21 +7,24 @@ import java.util.Date;
 
 /**
  *
- * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
+ * @author Caetano Flores, Juniors, DCCO-ESPE
  */
-public class FarmSimulator {
+public class ChickenCoop {
     public static void main(String[] args) {
+        int id;
         Chicken chicken;
         Egg egg;
         Poop poop;
-        
+    
         chicken = new Chicken();
         chicken.doStuff(0);
-        chicken.setName("Mesias");
-        chicken.setColor("pink and red");
-        chicken.setAge(21);
+        chicken.setId(1);
+        chicken.setName("Caetano");
+        chicken.setColor("withe and brown");
+        chicken.setAge(5);
         chicken.setIsMolting(true);
-        chicken.setBornOnDate(new Date());
-        System.out.println("this chicken is " + chicken);
+        chicken.setBornDate(new Date());
+        System.out.println("This chicken is " + chicken);
     }
+     
 }

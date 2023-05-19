@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  *
- * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
+ * @author Leonardo Narvaez, JSons; DCCO-ESPE
  */
 public class Chicken {
     private int id;

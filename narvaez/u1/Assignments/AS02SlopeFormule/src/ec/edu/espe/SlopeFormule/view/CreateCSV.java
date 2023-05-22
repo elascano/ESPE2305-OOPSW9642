@@ -14,7 +14,7 @@ public class CreateCSV {
   
   public static void generateCSV(List<CoordinatesAxis> coordinatesList, String filename) {
     try (FileWriter writer = new FileWriter(filename)) {
-      writer.append("X-axis_1,Y-axis_1,X-axis_2,Y-axis_2,Slope\n");
+      writer.append("X-axis_1;Y-axis_1;X-axis_2;Y-axis_2;Slope\n");
       
       for (CoordinatesAxis coordinates : coordinatesList) {
         float x1Axis = coordinates.getX1Axis();
@@ -23,17 +23,17 @@ public class CreateCSV {
         float y2Axis = coordinates.getY2Axis();
         float slope = coordinates.getSlope();
         
-        writer.append(String.valueOf(x1Axis)).append(",")
-              .append(String.valueOf(y1Axis)).append(",")
-              .append(String.valueOf(x2Axis)).append(",")
-              .append(String.valueOf(y2Axis)).append(",")
-              .append(String.valueOf(slope)).append("\n");
+        writer.append(String.valueOf(x1Axis)).append(";")
+              .append(String.valueOf(y1Axis)).append(";")
+              .append(String.valueOf(x2Axis)).append(";")
+              .append(String.valueOf(y2Axis)).append(";")
+              .append(String.valueOf(slope)).append(";");
       }
       
       writer.flush();
-      System.out.println("The CSV file was succesfully created!: " + filename);
+      System.out.println("The CSV file was successfully created: " + filename);
     } catch (IOException e) {
-      System.out.println("We cant create the CSV file! :(  " + e.getMessage());
+      System.out.println("We couldn't create the .csv file :(");
     }
   }
 }

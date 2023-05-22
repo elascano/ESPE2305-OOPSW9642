@@ -41,6 +41,7 @@ public class MenuController {
     public void calculateAndRegisterMenu() {
         inputAndValidateSphereRadius();
         sphere.setVolume(sphere.calculateVolume());
+        System.out.println("Sphere volume for the entered radius= " + sphere.getVolume());
         csvFile.setFileName("SphereVolumeCalculation");
         dataToWrite1 = csvFile.dataToWrite(sphere);
         csvFile.create();

@@ -29,14 +29,14 @@ public class CSVFile {
             File file = new File (fileName + ".csv");
             
             if(file.exists()){
-                System.out.println("Este archivo ya existe");
+                
             }
             else if(file.createNewFile()){
-                System.out.println("Se creó correctamente el archivo");
+                System.out.println("The file was created correctly");
             }
         }
         catch(IOException e){
-            System.out.println("Ocurrió un error al crear el archivo");
+            System.out.println("There was an error creating the file");
         }  
     }
     
@@ -52,7 +52,7 @@ public class CSVFile {
             fileReader.close();
         }
         catch(IOException e){
-            System.out.println("Ocurrió un error al leer el archivo");
+            System.out.println("There was an error reading the file");
         }
     }
     
@@ -63,7 +63,7 @@ public class CSVFile {
             fileWriter.close();
         }
         catch(IOException e){
-            System.out.println("Ocurrió un error al escribir en el archivo");
+            System.out.println("There was an error writing in the file");
         }
         
     }
@@ -73,7 +73,7 @@ public class CSVFile {
         
         if(file.exists()){
             data = dataToWriteIfFileExists(sphere);
-            System.out.println("El archivo ha sido actualizado correctamente");
+            System.out.println("The file has been updated correctly");
         }
         else{
             data = dataToWriteIfFileDoesntExists(sphere);
@@ -91,6 +91,7 @@ public class CSVFile {
         return data;
     }
     public String dataToWriteIfFileExists(Sphere sphere){
+        fileLines = 0;
         String data = new String();
         String sphereData = new String();
         File file = new File (fileName + ".csv");
@@ -104,7 +105,7 @@ public class CSVFile {
             data = (data + "\n" + sphereData);
         }
         catch(IOException e){
-            System.out.println("Ocurrió un error al escribir en el archivo");
+            System.out.println("There was an error writing in the file");
         }
     return data;
     }

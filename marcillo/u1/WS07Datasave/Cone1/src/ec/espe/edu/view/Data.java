@@ -44,16 +44,17 @@ public class Data {
     
     public void readData() {
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            reader.readLine();
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] values = line.split(",");
                 double radius = Double.parseDouble(values[0]);
                 double height = Double.parseDouble(values[1]);
                 double volume = Double.parseDouble(values[2]);
-                
+
                 System.out.println("Radius: " + radius);
                 System.out.println("Height: " + height);
-                System.out.println("volume: " + volume);
+                System.out.println("Volume: " + volume);
                 System.out.println();
             }
         } catch (IOException e) {

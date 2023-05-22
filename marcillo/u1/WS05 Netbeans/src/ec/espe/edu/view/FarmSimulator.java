@@ -4,8 +4,8 @@
  */
 package ec.espe.edu.view;
 
-import ec.espe.edu.model.Chicken;
 import ec.espe.edu.model.Egg;
+import ec.espe.edu.model.Chicken;
 import ec.espe.edu.model.Poop;
 import java.util.Date;
 
@@ -27,7 +27,5 @@ public class FarmSimulator {
         chicken.setIsMolting(true);
         chicken.setBornOnDate(new Date());
         System.out.println("This chicken is " + chicken);
-        
-        
     }
 }

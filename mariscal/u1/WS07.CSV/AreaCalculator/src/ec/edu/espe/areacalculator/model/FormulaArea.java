@@ -21,4 +21,4 @@ public class FormulaArea {
         circleArea = (float) (Math.PI * Math.pow(diameter / 2, 2));
         return circleArea;
     }
-}1
+}

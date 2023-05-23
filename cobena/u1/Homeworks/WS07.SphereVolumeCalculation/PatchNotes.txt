@@ -1,0 +1,15 @@
+As the task was deferreed, I make a new version
+
+V1.2.0
+
+- Implements writer.append(), before I made a function that proccess the data
+and mix the Strings written and the new, rewriting all the document, what was
+inefficent.
+
+- Implements split function and make a better view for the data saved view, 
+before the program just print all the String of the file
+
+- Order number bug when you close and start again the programm puting numbers
+since 1 again, corrected.
+
+- First line being in blank because a line being jumped, corrected

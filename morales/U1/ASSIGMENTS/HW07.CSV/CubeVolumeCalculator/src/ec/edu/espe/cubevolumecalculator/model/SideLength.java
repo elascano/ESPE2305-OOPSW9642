@@ -10,23 +10,28 @@ import java.util.Scanner;
  */
 public class SideLength {
     
-    public static double enterSideLength(double sideLength){
+    FileReaderWriter fileReader = new FileReaderWriter("volumecube.csv");
+    
+    public static void enterSideLength(Cube cube){
 	Scanner scanner = new Scanner(System.in);
-        double volume;
         
+        double volume;
         do{
             System.out.print("Enter the length of the side of the cube: ");
-            sideLength = scanner.nextDouble();
-            sideLength = UserMenu.validatePositive(sideLength);
-            volume = Cube.calculateCubeVolume(sideLength);
-            UserMenu.VolumePrint(volume);
+            cube.setSideLength(scanner.nextDouble());
+            if(cube.getSideLength()<0){
+                System.out.println("ERROR");
+            }
+            cube.setVolume(cube.calculateCubeVolume());
+            UserMenu.VolumePrint(cube.getVolume());
             
-        }while(sideLength <= 0);
-        return volume;
+        }while(cube.getSideLength() <= 0);
     }
+    
 
     private static void FileReaderWriter(double sideLength) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
     
 }

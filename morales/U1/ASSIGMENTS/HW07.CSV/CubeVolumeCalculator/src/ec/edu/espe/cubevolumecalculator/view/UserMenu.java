@@ -12,11 +12,13 @@ import java.util.Scanner;
 public class UserMenu {
     public static void userMenu(){
         Scanner scanner = new Scanner(System.in);
+        Cube cube = new Cube();
         FileReaderWriter fileReader = new FileReaderWriter("volumecube.csv");
         
         
         int option;
         double sideLength = 0, volume;
+        
         do{
             System.out.println("\t Menu Options \n");
             System.out.println("1. Insert Data \n");
@@ -30,13 +32,15 @@ public class UserMenu {
             }
             
             switch(option){
+                
                 case 1 -> {
-                    sideLength = SideLength.enterSideLength(sideLength);
-                    fileReader.writeFile(new Cube(sideLength));
+                    SideLength.enterSideLength(cube);
+                    fileReader.writeFile(cube);
                     
                 }
                 
                 case 2 -> {
+                    fileReader.readFile(cube);
                 } 
                 
                 case 3 -> {
@@ -46,13 +50,6 @@ public class UserMenu {
             System.out.println();
         }while(option <= 3);
         scanner.close();
-    }
-    
-    public static double validatePositive(double number){
-        if(number <= 0){
-        System.out.println("Warning! The length of the cube cannot be equal to or less than 0.\n");
-        }
-        return number;
     }
     
     public static void VolumePrint(double volume){

@@ -6,16 +6,17 @@ package ec.edu.espe.cubevolumecalculator.model;
  */
 public class Cube {
 
-    public Cube(double sideLength1) {
-    }
+
     private double volume;
     private double sideLength;
-    
-    public static double calculateCubeVolume(double sideLength){
-	double volume = sideLength * sideLength * sideLength;
+
+    public Cube() {    
+    }
+        
+    public double calculateCubeVolume(){
+	volume = sideLength * sideLength * sideLength;
 	return volume;
     }
-
 
     public double getVolume() {
         return volume;

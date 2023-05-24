@@ -22,6 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
 /morales/U1/ChickenFarmSimulator/nbproject/private/
 /morales/U1/WORKSHOPS/WS05.NETBEANS.CHICKENFARM/ChickenFarmSimulator/nbproject/private/
 /morales/U1/WORKSHOPS/WS05.NETBEANS.CHICKENFARM/ChickenFarmSimulator/build/
@@ -29,3 +30,7 @@ replay_pid*
 /morales/U1/ASSIGMENTS/CubeVolumeCalculator/nbproject/private/
 /morales/U1/ASSIGMENTS/CubeVolumeCalculator/build/
 /morales/U1/ASSIGMENTS/CubeVolumeCalculator/dist/
+=======
+/davila/Unit1/VelocityVehicle/nbproject/private/
+/davila/Unit1/VelocityVehicle/build/
+>>>>>>> 5ced54fe720aa9810fe5364237bc5377ab86fb6c

@@ -16,7 +16,7 @@ public class CalculateAreaofSemicircle {
         boolean out = false;
 
         while (!out) {
-            System.out.println("Menú:");
+            System.out.println("Menu:");
             System.out.println("1. Insert Data");
             System.out.println("2. Read Data .csv");
             System.out.println("3. Out");
@@ -24,20 +24,16 @@ public class CalculateAreaofSemicircle {
             int opcion = scanner.nextInt();
 
             switch (opcion) {
-                case 1:
+                case 1 -> {
                     calculateArea(scanner);
                     saveResultCSV();
-                    break;
-                case 2:
-                    readFileCSV();
-                    break;
-                case 3:
+                }
+                case 2 -> readFileCSV();
+                case 3 -> {
                     out = true;
-                    System.out.println("¡See you later!");
-                    break;
-                default:
-                    System.out.println("Invalid option. Try again.");
-                    break;
+                    System.out.println("See you later!");
+                }
+                default -> System.out.println("Invalid option. Try again.");
             }
         }
     }
@@ -46,13 +42,16 @@ public class CalculateAreaofSemicircle {
         System.out.print("Enter the radius of the semicircle: ");
         double radius = scanner.nextDouble();
         double area = (Math.PI * Math.pow(radius, 2)) / 2;
-        System.out.println("The area of ​​the semicircle is: " + area);
+        System.out.println("The area of the semicircle is: " + area);
     }
 
     private static void saveResultCSV() {
         try (PrintWriter writer = new PrintWriter(new FileWriter(ARCHIVO_CSV))) {
-            writer.println("Area");
-            writer.println(getArea());
+            double radius = getRadio();
+             writer.print("Radius,");
+             writer.println("Area");
+             writer.print(radius + ",");
+             writer.println(getArea());
             System.out.println("Result saved in: " + ARCHIVO_CSV);
         } catch (IOException e) {
             System.out.println("Error saving result to file " + ARCHIVO_CSV);
@@ -65,6 +64,12 @@ public class CalculateAreaofSemicircle {
         double radio = scanner.nextDouble();
         return (Math.PI * Math.pow(radio, 2)) / 2;
     }
+    
+    private static double getRadio() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the radius of the semicircle to save to the file: ");
+    return scanner.nextDouble();
+}
 
     private static void readFileCSV() {
         try (BufferedReader reader = new BufferedReader(new FileReader(ARCHIVO_CSV))) {

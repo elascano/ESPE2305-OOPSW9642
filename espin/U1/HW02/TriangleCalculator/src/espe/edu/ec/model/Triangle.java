@@ -10,6 +10,8 @@ public class Triangle {
     private double sideOne;
     private double sideTwo;
     private double sideThree;
+    private Double area;
+    private Double perimeter;
     
     public Triangle(double base, double height, double sideOne,double sideTwo, double sideThree){
         this.base=base;
@@ -59,4 +61,24 @@ public class Triangle {
         this.sideThree=sideThree;
     }
     
+    public void setArea(double area){
+        this.area=area;
+    }
+    public void setPerimeter(double perimeter){
+        this.perimeter=perimeter;
+    }
+       
+    public double getArea(){
+        if (this.area == null) {
+            this.area = calculateArea();
+        }
+        return this.area;
+    }
+    
+    public double getPerimeter(){
+        if (this.perimeter == null) {
+            this.perimeter = calculatePerimeter();
+        }
+        return this.perimeter;
+    }
 }

@@ -22,10 +22,12 @@ public class TriangleController {
             
             switch (option) {
                 case 1 -> {
-                    Triangle triangle = ui.inputData();
-                    fileHandler.writeData(triangle);
-                    System.out.println("Area: " + triangle.calculateArea());
-                    System.out.println("Perimetro: " + triangle.calculatePerimeter());
+                        Triangle triangle = ui.inputData();
+                        triangle.setArea(triangle.calculateArea());
+                        triangle.setPerimeter(triangle.calculatePerimeter());
+                        fileHandler.writeData(triangle);
+                        System.out.println("Area: " + triangle.getArea());
+                        System.out.println("Perimetro: " + triangle.getPerimeter());
                 }
                 case 2 -> {
                     List<Triangle> triangles = fileHandler.readData();

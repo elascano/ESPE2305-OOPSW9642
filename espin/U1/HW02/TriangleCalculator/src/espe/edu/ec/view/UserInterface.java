@@ -10,15 +10,15 @@ import espe.edu.ec.model.Triangle;
 public class UserInterface {
     public Triangle inputData(){
         Scanner scanner=new Scanner(System.in);
-        System.out.print("Ingrese la base del triangulo");
+        System.out.print("Ingrese la base del triangulo: ");
         double base=scanner.nextDouble();
-        System.out.print("Ingrese la altura del triangulo");
+        System.out.print("Ingrese la altura del triangulo: ");
         double height=scanner.nextDouble();
-        System.out.print("Ingrese el lado uno del triangulo");
+        System.out.print("Ingrese el lado uno del triangulo: ");
         double sideOne=scanner.nextDouble();
-        System.out.print("Ingrese el lado dos del triangulo");
+        System.out.print("Ingrese el lado dos del triangulo: ");
         double sideTwo=scanner.nextDouble();
-        System.out.print("Ingrese el lado tres del triangulo");
+        System.out.print("Ingrese el lado tres del triangulo: ");
         double sideThree=scanner.nextDouble();
         
         return new Triangle(base,height,sideOne,sideTwo,sideThree); 

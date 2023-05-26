@@ -19,3 +19,6 @@
 *.tar.gz
 *.rar
 
+/ws/manobanda/u1/ws07/ChickenFarm/nbproject/private/
+/ws/manobanda/u1/ws07/ChickenFarm/build/
+/ws/manobanda/u1/ws07/ChickenFarm/dist/

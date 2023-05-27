@@ -19,14 +19,11 @@
 *.tar.gz
 *.rar
 
+<<<<<<< HEAD
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-=======
-/davila/Unit1/VelocityVehicle/nbproject/private/
-/davila/Unit1/VelocityVehicle/build/
->>>>>>> 5ced54fe720aa9810fe5364237bc5377ab86fb6c
-=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 /tipan/u1/WS05NetBeans/PentagonVolcumenCalculator/build/
 /tipan/u1/WS05NetBeans/PentagonVolumenCalculator/nbproject/private/
@@ -39,4 +36,11 @@ replay_pid*
 /tipan/u1/WS/WS05NetBeans/ChickenFarmSimulator/nbproject/private/
 /tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/nbproject/private/
 /tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/build/
->>>>>>> 538568d564a5dec325e2491f560be8a5932f4c45
+/tipan/u1/WS/WS07/Chicken Farm/nbproject/private/
+/tipan/u1/WS/WS07FromDiagTocod/ChickenFarm/nbproject/private/
+/tipan/u1/WS/WS07FromDiagTocod/ChickenFarm/build/
+=======
+/ws/manobanda/u1/ws07/ChickenFarm/nbproject/private/
+/ws/manobanda/u1/ws07/ChickenFarm/build/
+/ws/manobanda/u1/ws07/ChickenFarm/dist/
+>>>>>>> fc9356ac37e4c5b575bc71d964102152e9d6c6b2

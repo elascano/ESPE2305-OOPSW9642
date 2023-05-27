@@ -1,4 +1,5 @@
-package ec.edu.espe.ohmsLaw.controller;
+
+package ec.edu.espe.formula.controller;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,11 +7,11 @@ import java.io.IOException;
 
 /**
  *
- * @author Yeshua Chiliquinga, JSons; DCCO-ESPE
+ * @author Josue Marin, CodeCrafters: DCCO-ESPE
  */
 public class reedFileCSV {
-     public void reedFileCSV() throws IOException {
-        String file = "Voltage.csv";
+ public void reedFileCSV() throws IOException {
+        String file = "C:\\Users\\Usuario\\Documents\\ESPE\\1_2_3 level\\OOP_9642\\NETBEANS\\CSVFormula\\Excel.csv";
         BufferedReader reader = null;
         String line = "";
         try {
@@ -30,4 +31,5 @@ public class reedFileCSV {
             }
         }
     }
-}
+}    
+

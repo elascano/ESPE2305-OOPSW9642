@@ -19,6 +19,7 @@
 *.tar.gz
 *.rar
 
+<<<<<<< HEAD
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
@@ -33,3 +34,5 @@ replay_pid*
 /cobena/u1/Homeworks/WorkPhysics/build/
 /cobena/u1/Workshops/WS07.FromDiagTocCodde/nbproject/private/
 /cobena/u1/Workshops/WS07.FromDiagTocCodde/build/
+=======
+>>>>>>> ca4858abf0cba488b07dcfb5630afcbd5edf9c30

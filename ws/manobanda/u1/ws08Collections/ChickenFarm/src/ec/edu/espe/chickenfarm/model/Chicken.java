@@ -1,8 +1,8 @@
 
 package ec.edu.espe.chickenfarm.model;
 
-import java.time.LocalDate;
 import java.util.Date;
+import java.util.Random;
 
 /**
  *
@@ -37,7 +37,11 @@ public class Chicken {
 
     public Date computeAge(Date bornOnDate){
         //TODO code, compute age in years using the bornOnDate
-        return new Date();
+        Random random = new Random();
+        int year = random.nextInt(70);
+        int month = random.nextInt(12);
+        int date = random.nextInt(30);
+        return (new Date(year, month, date));
     }
     
     /**

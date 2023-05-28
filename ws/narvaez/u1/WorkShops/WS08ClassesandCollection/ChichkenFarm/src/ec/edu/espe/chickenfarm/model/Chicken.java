@@ -34,8 +34,8 @@ public class Chicken {
     }
     
     public int computeAge(){
-        this.bornOnDate.setYear(this.bornOnDate.getYear() - 1900);
-        int newAge = new Date().getYear() - this.bornOnDate.getYear();
+        bornOnDate.setYear(this.bornOnDate.getYear() - 1900);
+        int newAge = new Date().getYear() - bornOnDate.getYear();
         return newAge;
     }
 

@@ -18,10 +18,10 @@ public class Chicken {
 
     @Override
     public String toString() {
-        return "Chicken{" + "id=" + getId() + ", name=" + getName() +
+        return "Chicken" + "id=" + getId() + ", name=" + getName() +
                 ", color=" + getColor() + ", age=" + getAgeInYears() + "years, " + getAgeInMonths() + "months, "  + getAgeInDays() + 
                 "days" + ", isMolting=" 
-                + isIsMolting() + ", bornOnDate=" + getBornOnDate() + '}' + "\n";
+                + isIsMolting() + ", bornOnDate=" + getBornOnDate() + "\n";
     }
 
     public Chicken(int id, String name, String color, boolean isMolting, Date bornOnDate) {

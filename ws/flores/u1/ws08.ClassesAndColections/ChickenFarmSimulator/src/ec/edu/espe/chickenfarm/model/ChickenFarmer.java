@@ -6,11 +6,8 @@ package ec.edu.espe.chickenfarm.model;
 
 /**
  *
- * @author Caetano Flores, Software Juniors, DCCO-ESPE
+ * @author Caetano Flores, Juniors, DCCO-ESPE
  */
-public class Poop {
-
-    public Poop() {
-    }
+public class ChickenFarmer {
     
 }

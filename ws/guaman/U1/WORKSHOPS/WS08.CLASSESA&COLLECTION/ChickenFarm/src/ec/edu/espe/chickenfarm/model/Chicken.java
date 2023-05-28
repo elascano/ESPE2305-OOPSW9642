@@ -1,10 +1,13 @@
+
 package ec.edu.espe.chickenfarm.model;
 
+import static java.lang.Math.random;
+import static java.lang.StrictMath.random;
 import java.util.Date;
 
 /**
  *
- * @author Leonardo Narvaez The FAMSE ESPE-DCCO
+ * @author Jordan Guaman, Software Juniors, DCCO-ESPE
  */
 public class Chicken {
     private int id;
@@ -16,32 +19,32 @@ public class Chicken {
 
     @Override
     public String toString() {
-        return "\nChicken{" + "id=" + id + ", name=" + name + ", "
-                + "color=" + color + ", age=" + age + ", "
-                + "isMolting=" +isMolting + 
-                ", bornOnDate=" + bornOnDate + '}';
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + ", bornOnDate=" + bornOnDate + "}\n";
     }
+    
 
-       public Chicken(int id, String name, String color, boolean isMolting, Date bornOnDate) {
+    public Chicken(int id, String name, String color, boolean isMolting, Date bornOnDate) {
         this.id = id;
         this.name = name;
         this.color = color;
         this.isMolting = isMolting;
+        bornOnDate.setYear(bornOnDate.getYear()-1900);
         this.bornOnDate = bornOnDate;
-        //TODO CODE, Call method that computes the age
-        this.age = computeAge();
-        //these methods are deprecated 
+        //call method computeAge
+        this.age=computeAge(bornOnDate).getYear();
+        //these methodsare deprecated
+        
     }
-    
-    public int computeAge(){
-        bornOnDate.setYear(this.bornOnDate.getYear() - 1900);
-        int newAge = new Date().getYear() - bornOnDate.getYear();
-        return newAge;
+    public Date computeAge(Date bornOnDate){
+  
+        long timeDif = new Date().getTime()-bornOnDate.getTime();
+        Date datenew = new Date();
+        datenew.setTime(timeDif);
+        datenew.setYear(datenew.getYear()-70);
+        return datenew;
+        
     }
 
-    /**
-     * @return the id
-     */
     public int getId() {
         return id;
     }
@@ -122,4 +125,6 @@ public class Chicken {
     public void setBornOnDate(Date bornOnDate) {
         this.bornOnDate = bornOnDate;
     }
+    
+    
 }

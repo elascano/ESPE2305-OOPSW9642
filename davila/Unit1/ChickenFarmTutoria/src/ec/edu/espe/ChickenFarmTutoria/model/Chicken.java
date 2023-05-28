@@ -1,10 +1,14 @@
-package ec.edu.espe.chickenfarm.model;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ec.edu.espe.ChickenFarmTutoria.model;
 
 import java.util.Date;
 
 /**
  *
- * @author Leonardo Narvaez The FAMSE ESPE-DCCO
+ * @author Anabel Davila, killChainTeam, DCCO-ESPE
  */
 public class Chicken {
     private int id;
@@ -13,32 +17,58 @@ public class Chicken {
     private int age;
     private boolean isMolting;
     private Date bornOnDate;
-
+    private Date todaysDate;
+    private int day;
+    private int month;
+    private int year;
+    
+    
+    
     @Override
     public String toString() {
-        return "\nChicken{" + "id=" + id + ", name=" + name + ", "
-                + "color=" + color + ", age=" + age + ", "
-                + "isMolting=" +isMolting + 
+        return "Chicken{" + "id=" + id + ", name=" + name + 
+                ", color=" + color + ", age=" + age + 
+                ", isMolting=" + isMolting + 
                 ", bornOnDate=" + bornOnDate + '}';
     }
-
-       public Chicken(int id, String name, String color, boolean isMolting, Date bornOnDate) {
+    
+    public Chicken(int id, String name, String color, boolean isMolting, Date bornOnDate) {
         this.id = id;
         this.name = name;
         this.color = color;
         this.isMolting = isMolting;
         this.bornOnDate = bornOnDate;
-        //TODO CODE, Call method that computes the age
-        this.age = computeAge();
-        //these methods are deprecated 
+        //TODO code, compute age using the bornOnDate
+        this.year = bornOnDate.getYear();
+        this.month=bornOnDate.getMonth();
+        this.day=bornOnDate.getDay();
+       
+        this.age=getAge(year, month, day);
+        //these methods are deprecated
     }
+    public int getAge(int year, int month, int day) {
     
-    public int computeAge(){
-        bornOnDate.setYear(this.bornOnDate.getYear() - 1900);
-        int newAge = new Date().getYear() - bornOnDate.getYear();
-        return newAge;
+              
+        Date now = new Date();
+    int nowMonth = now.getMonth();
+    int nowYear = now.getYear();
+    int result = nowYear - year;
+    if (month > nowMonth) {
+        result--;
     }
+    else if (month == nowMonth) {
+        int nowDay = now.getDay();
 
+        if (day > nowDay) {
+            result--;
+        }
+    }
+    return result;
+    }
+    public Date computeAge(Date bornOnDate){
+        //TODO code, compute age in years using born on date
+        return new Date();
+    }
     /**
      * @return the id
      */
@@ -122,4 +152,8 @@ public class Chicken {
     public void setBornOnDate(Date bornOnDate) {
         this.bornOnDate = bornOnDate;
     }
+    
+    
+
+    
 }

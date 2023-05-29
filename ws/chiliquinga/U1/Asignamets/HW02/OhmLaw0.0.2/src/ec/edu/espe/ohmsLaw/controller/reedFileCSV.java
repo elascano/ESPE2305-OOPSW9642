@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class reedFileCSV {
      public void reedFileCSV() throws IOException {
-        String file = "C:\\Users\\yeshu\\OneDrive\\Documentos Académicos\\OBJECTS_ORIENTED_PROMAMMING\\FIRST_PARCIAL\\HomeWorks\\ohmLaw\\Voltage.csv";
+        String file = "Voltage.csv";
         BufferedReader reader = null;
         String line = "";
         try {

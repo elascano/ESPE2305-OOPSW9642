@@ -4,12 +4,10 @@
  */
 package ec.espe.edu.view;
 import java.util.Scanner;
-import ec.espe.edu.model.Velocity;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+
 /**
  *
  * @author Anabel Davila, killChainTeam, DCCO-ESPE
@@ -27,10 +25,10 @@ public class Menu {
         System.out.println("La velocidad del vehículo fue de " + velocity + " km/h");
     String fileName = "Datos.csv";
     try {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-        writer.write(distance + "," + time + "," + velocity);
-        writer.newLine();
-        writer.close();
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+                writer.write(distance + "," + time + "," + velocity);
+                writer.newLine();
+            }
     } catch(IOException e) {
         System.err.println("Error al escribir en archivo: " + e);
         }

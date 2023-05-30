@@ -9,10 +9,10 @@ package ec.espe.edu.model;
  * @author Anabel Davila, killChainTeam, DCCO-ESPE
  */
 public class Velocity {
-    private double distance;
-    private double time;
+    private final double distance;
+    private final double time;
     
-    public Velocity(double distance, double time) {
+    public Velocity(double distance, double time,double fast) {
         this.distance = distance;
         this.time = time;
     }

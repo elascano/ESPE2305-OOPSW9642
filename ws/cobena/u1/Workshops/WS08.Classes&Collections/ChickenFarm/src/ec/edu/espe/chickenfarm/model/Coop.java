@@ -16,6 +16,9 @@ public class Coop {
         return "{id=" + id + "\nchickens=\n" + chickens + '}';
     }
 
+    public Coop() {
+    }
+    
     public Coop(int id, ArrayList<Chicken> chickens) {
         this.id = id;
         this.chickens = chickens;

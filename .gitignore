@@ -19,3 +19,5 @@
 *.tar.gz
 *.rar
 
+# VP Temporal Files #
+*.bak_*

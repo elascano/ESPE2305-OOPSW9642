@@ -19,28 +19,9 @@
 *.tar.gz
 *.rar
 
-<<<<<<< HEAD
+# VP Temporal Files #
+*.bak_*
+=======
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-<<<<<<< HEAD
-<<<<<<< HEAD
-/tipan/u1/WS05NetBeans/PentagonVolcumenCalculator/build/
-/tipan/u1/WS05NetBeans/PentagonVolumenCalculator/nbproject/private/
-/tipan/u1/WS05NetBeans/PentagonVolumenCalculator/build/
-/tipan/u1/WS05NetBeans/PentagonVolumeCalculator/nbproject/private/
-/tipan/u1/WS05NetBeans/PentagonVolumeCalculator/build/
-=======
-/tipan/u1/WS/WS05NetBeans/ChickenFarmSimulator/build/
-/tipan/u1/WS/WS05NetBeans/ChickenFarmSimulator/dist/
-/tipan/u1/WS/WS05NetBeans/ChickenFarmSimulator/nbproject/private/
-/tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/nbproject/private/
-/tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/build/
-/tipan/u1/WS/WS07/Chicken Farm/nbproject/private/
-/tipan/u1/WS/WS07FromDiagTocod/ChickenFarm/nbproject/private/
-/tipan/u1/WS/WS07FromDiagTocod/ChickenFarm/build/
-=======
-/ws/manobanda/u1/ws07/ChickenFarm/nbproject/private/
-/ws/manobanda/u1/ws07/ChickenFarm/build/
-/ws/manobanda/u1/ws07/ChickenFarm/dist/
->>>>>>> fc9356ac37e4c5b575bc71d964102152e9d6c6b2

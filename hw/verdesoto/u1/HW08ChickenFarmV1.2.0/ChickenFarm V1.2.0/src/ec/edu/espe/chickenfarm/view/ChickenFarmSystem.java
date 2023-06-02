@@ -10,5 +10,6 @@ import java.io.IOException;
 public class ChickenFarmSystem {
     public static void main(String[] args) throws IOException {
         Screen.optionMenu();
+        
     }
 }

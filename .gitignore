@@ -19,73 +19,9 @@
 *.tar.gz
 *.rar
 
-<<<<<<< HEAD
+# VP Temporal Files #
+*.bak_*
+=======
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-<<<<<<< HEAD
-<<<<<<< HEAD
-/tipan/u1/WS05NetBeans/PentagonVolcumenCalculator/build/
-/tipan/u1/WS05NetBeans/PentagonVolumenCalculator/nbproject/private/
-/tipan/u1/WS05NetBeans/PentagonVolumenCalculator/build/
-/tipan/u1/WS05NetBeans/PentagonVolumeCalculator/nbproject/private/
-/tipan/u1/WS05NetBeans/PentagonVolumeCalculator/build/
-=======
-<<<<<<< HEAD
-/davila/Unit1/VelocityVehicle/nbproject/private/
-/davila/Unit1/VelocityVehicle/build/
-<<<<<<< HEAD
-/davila/Unit1/Velocidad/nbproject/private/
-/davila/Unit1/WS07ChickenFarmer/ChickenFarm/nbproject/private/
-/davila/Unit1/WS07ChickenFarmer/ChickenFarm/build/
-/davila/Unit1/WS07ChickenFarmer/ChickenFarm2/target/
-/davila/Unit1/WS07ChickenFarmer/ChickenFarmTutoria/nbproject/private/
-/davila/Unit1/WS07ChickenFarmer/ChickenFarmTutoria/build/
-/davila/Unit1/WS07ChickenFarmer/ChickenFarmTutoria/dist/
-=======
->>>>>>> 3f985d4ed75e4c6839b501bd585c522313b4c0d6
-/verdesoto/u1/Workshops/WS08Collections/ChickenFarm/nbproject/private/
-/verdesoto/u1/Workshops/WS08Collections/ChickenFarm/build/
-/verdesoto/u1/Workshops/WS07FromDiagToCode/ChickenFarm/nbproject/private/
-/verdesoto/u1/Workshops/WS07FromDiagToCode/ChickenFarm/build/
-=======
-<<<<<<< HEAD
-/cobena/u1/Homeworks/WorkPhysics/build/
-/cobena/u1/Workshops/WS07.FromDiagTocCodde/nbproject/private/
-/cobena/u1/Workshops/WS07.FromDiagTocCodde/build/
-=======
->>>>>>> ca4858abf0cba488b07dcfb5630afcbd5edf9c30
-=======
-/tipan/u1/WS/WS05NetBeans/ChickenFarmSimulator/build/
-/tipan/u1/WS/WS05NetBeans/ChickenFarmSimulator/dist/
-/tipan/u1/WS/WS05NetBeans/ChickenFarmSimulator/nbproject/private/
-/tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/nbproject/private/
-/tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/build/
-/tipan/u1/WS/WS07/Chicken Farm/nbproject/private/
-/tipan/u1/WS/WS07FromDiagTocod/ChickenFarm/nbproject/private/
-/tipan/u1/WS/WS07FromDiagTocod/ChickenFarm/build/
-=======
-/ws/manobanda/u1/ws07/ChickenFarm/nbproject/private/
-/ws/manobanda/u1/ws07/ChickenFarm/build/
-/ws/manobanda/u1/ws07/ChickenFarm/dist/
->>>>>>> fc9356ac37e4c5b575bc71d964102152e9d6c6b2
-<<<<<<< HEAD
-/ws/manobanda/u1/ws08Collections/ChickenFarm/nbproject/private/
-/ws/manobanda/u1/ws08Collections/ChickenFarm/build/
-=======
->>>>>>> 18c3e5229cdabec8b51e4a6c11469e6399372c0f
-<<<<<<< HEAD
-/ws/cobena/u1/Workshops/WS08.Classes&Collections/ChickenFarm/nbproject/private/
-/ws/cobena/u1/Workshops/WS08.Classes&Collections/ChickenFarm/build/
-=======
-/ws/tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/nbproject/private/
-/ws/tipan/u1/HW/HW01VolumeCalculator/PentagonVolumeCalculator/build/
->>>>>>> 577fe0f450cd13bb8309757932a7c3dfb7f5b666
->>>>>>> 32adb05a3ac73262f638eaffd1dddf193446e2a0
-<<<<<<< HEAD
-/ws/cobena/u1/Workshops/WS08.Classes&Collections/ChickenFarm/dist/
-=======
->>>>>>> 6391cc0c81f01ce36ca1ea70c7642cb7ccb2139a
->>>>>>> 238c5b91c4ead462d868f611ca003ae3bf13d263
-/ws/manobanda/u1/assigments/hw08JsonFile/ChickenFarm/nbproject/private/
-/ws/manobanda/u1/assigments/hw08JsonFile/ChickenFarm/build/

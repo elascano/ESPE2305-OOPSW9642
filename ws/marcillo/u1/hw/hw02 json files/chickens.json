@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "chickens": [
+    {
+      "id": 1,
+      "name": "juan",
+      "color": "brown",
+      "age": 2,
+      "isMolting": true,
+      "bornOnDate": "May 29, 2023, 9:51:33 PM"
+    }
+  ]
+}

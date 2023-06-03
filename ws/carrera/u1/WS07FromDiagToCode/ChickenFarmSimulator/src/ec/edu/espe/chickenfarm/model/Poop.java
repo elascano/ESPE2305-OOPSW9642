@@ -2,7 +2,7 @@ package ec.edu.espe.chickenfarm.model;
 
 /**
  *
- * @author Joan Cobeña, KillChain, DCCO-ESPE
+ * @author Pablo Carrera, Jsons, DCCO-ESPE
  */
 
 public class Poop {

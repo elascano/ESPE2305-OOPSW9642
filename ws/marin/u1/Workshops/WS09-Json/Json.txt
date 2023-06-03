@@ -1,0 +1,4 @@
+{"students":[
+{"id":0,"name":"Josue Marin","age":21,"average":4.00,"isWorking": true,"parents":[{"name":"Maria"},{"nameMother":"Enma"},{"nameFather":"Marco"}]},
+{"id":0,"name":"Josue Marin","age":21,"average":4.00,"isWorking": true}
+]} 

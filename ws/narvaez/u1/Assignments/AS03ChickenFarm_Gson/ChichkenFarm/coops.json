@@ -1,0 +1,2 @@
+{"id":1,"chickens":[{"id":1,"name":"Leo","color":"brown","age":1900,"isMolting":true,"bornOnDate":"May 29, 123, 9:34:23 PM"}]}
+{"id":2,"chickens":[{"id":1,"name":"leo","color":"black","age":1900,"isMolting":false,"bornOnDate":"May 29, 123, 9:35:07 PM"}]}

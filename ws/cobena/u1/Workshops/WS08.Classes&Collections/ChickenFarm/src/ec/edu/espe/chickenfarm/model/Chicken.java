@@ -17,10 +17,13 @@ public class Chicken {
     
     @Override
     public String toString() {
-        return "Chicken{" + "id=" + id + ", name=" + name 
-                + ", color=" + color + ", age=" + age 
-                + ", isMolting=" + isMolting 
-                + ", bornOnDate=" + bornOnDate + "}\n";
+        return "Chicken # " + id + "\n Name:" + name 
+                + ", Color: " + color + ", Age: " + age 
+                + ", isMolting: " + isMolting 
+                + ", Born date: " + bornOnDate + "}\n";
+    }
+
+    public Chicken() {
     }
     
     public Chicken(int id, String name, String color, boolean isMolting, Date bornOnDate) {

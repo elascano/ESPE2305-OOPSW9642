@@ -1,12 +1,10 @@
-package ec.edu.espe.chickenfarm.controller;
+package ec.edu.espe.chickenfarm.model;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import ec.edu.espe.chickenfarm.model.Chicken;
-import ec.edu.espe.chickenfarm.model.Coop;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -61,6 +59,24 @@ public class JsonFile {
         
     }
     
+    public String readData() {
+        try {
+            System.out.println(fileName);
+            FileReader reader = new FileReader(fileName + ".json");
+            BufferedReader bR = new BufferedReader(reader);
+            String content = new String();
+            String line;
+            while ((line = bR.readLine()) != null) {
+                content += line;
+            }
+            return content;
+        } 
+        catch (IOException ex) {
+            System.out.println("Hubo un error al leer el archivo");
+            return "";
+        }
+    }
+    
     public void writeIfFileExists(Chicken chicken, int numberOfCoop){
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName + ".json"));
@@ -83,24 +99,6 @@ public class JsonFile {
             System.out.println("Hubo un error al escribir el archivo");
         }
         
-    }
-    
-    public String readData() {
-        try {
-            
-            FileReader reader = new FileReader(fileName + ".json");
-            BufferedReader bR = new BufferedReader(reader);
-            String content = new String();
-            String line;
-            while ((line = bR.readLine()) != null) {
-                content += line;
-            }
-            return content;
-        } 
-        catch (IOException ex) {
-            System.out.println("Hubo un error al leer el archivo");
-            return "";
-        }
     }
 
     public String getFileName() {

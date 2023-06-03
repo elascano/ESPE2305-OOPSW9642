@@ -1,6 +1,6 @@
 package ec.edu.espe.chickenfarm.view;
 
-import ec.edu.espe.chickenfarm.controller.JsonFile;
+import ec.edu.espe.chickenfarm.model.JsonFile;
 import ec.edu.espe.chickenfarm.model.Chicken;
 import ec.edu.espe.chickenfarm.model.Coop;
 import ec.edu.espe.chickenfarm.model.Egg;

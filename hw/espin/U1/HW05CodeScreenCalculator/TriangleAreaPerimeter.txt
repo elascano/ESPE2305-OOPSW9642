@@ -1,0 +1,27 @@
+public class TriangleAreaPerimeter {
+    public static void main(String[] args) {
+        double base = 5.0;
+        double height = 3.0;
+        double side1 = 4.0;
+        double side2 = 4.0;
+        double side3 = 6.0;
+
+        printTheResult(base,height,side1,side2,side3);
+    }
+
+    public static double calculateArea(double base, double height) {
+        return 0.5 * base * height;
+    }
+
+    public static double calculatePerimeter(double side1, double side2, double side3) {
+        return side1 + side2 + side3;
+    }
+
+    public static void printTheResult(double base, double height, double side1, double side2, double side3){
+        double area = calculateArea(base, height);
+        double perimeter = calculatePerimeter(side1, side2, side3);
+
+        System.out.println("El area del triangulo es: " + area);
+        System.out.println("El perimetro del triangulo es: " + perimeter);
+    }
+}

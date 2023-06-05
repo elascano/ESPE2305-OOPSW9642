@@ -111,10 +111,10 @@ public class ChickenFarm {
 
     private static void saveChickensToCSV(ArrayList<Chicken> chickens) {
     try (FileWriter writer = new FileWriter(CSV_FILE_PATH)) {
-        // Escribir encabezados
+        
         writer.write("ID;Name;Color;IsMolting;Age\n");
 
-        // Escribir datos de cada pollo
+      
         for (Chicken chicken : chickens) {
             writer.write(chicken.getId() + ";");
             writer.write(chicken.getName() + ";");

@@ -25,4 +25,16 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
 /ws/verdesoto/u1/Workshops/WS10/JavaApplication11/nbproject/private/
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+/tipan/u1/WS05NetBeans/PentagonVolcumenCalculator/build/
+/tipan/u1/WS05NetBeans/PentagonVolumenCalculator/nbproject/private/
+/tipan/u1/WS05NetBeans/PentagonVolumenCalculator/build/
+/tipan/u1/WS05NetBeans/PentagonVolumeCalculator/nbproject/private/
+/tipan/u1/WS05NetBeans/PentagonVolumeCalculator/build/
+=======
+>>>>>>> 2a8c9a2d0049d6cc5e7bd82656a38855dd63bc9e

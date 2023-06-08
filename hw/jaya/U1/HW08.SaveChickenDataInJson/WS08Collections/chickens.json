@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Lucy",
+    "color": "w\u0026b",
+    "age": 3,
+    "isMolting": false,
+    "bornOnDate": "Mar 17, 2020, 12:00:00 AM",
+    "year": 120,
+    "month": 2,
+    "day": 2
+  },
+  {
+    "id": 2,
+    "name": "maruja",
+    "color": "w",
+    "age": 1,
+    "isMolting": true,
+    "bornOnDate": "Dec 1, 2021, 12:00:00 AM",
+    "year": 121,
+    "month": 11,
+    "day": 3
+  },
+  {
+    "id": 145,
+    "name": "Lilith",
+    "color": "Negro",
+    "age": 25,
+    "isMolting": false,
+    "bornOnDate": "Jul 13, 1997, 12:00:00 AM",
+    "year": 97,
+    "month": 6,
+    "day": 0
+  }
+]

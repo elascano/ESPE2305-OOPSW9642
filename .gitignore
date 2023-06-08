@@ -19,10 +19,16 @@
 *.tar.gz
 *.rar
 
-<<<<<<< HEAD
+# VP Temporal Files #
+*.bak_*
+=======
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
+/ws/verdesoto/u1/Workshops/WS10/JavaApplication11/nbproject/private/
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /tipan/u1/WS05NetBeans/PentagonVolcumenCalculator/build/
@@ -31,6 +37,7 @@ replay_pid*
 /tipan/u1/WS05NetBeans/PentagonVolumeCalculator/nbproject/private/
 /tipan/u1/WS05NetBeans/PentagonVolumeCalculator/build/
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 /davila/Unit1/VelocityVehicle/nbproject/private/
 /davila/Unit1/VelocityVehicle/build/
@@ -92,3 +99,6 @@ replay_pid*
 /ws/verdesoto/u1/Workshops/WS10SalesApp/Tax/nbproject/private/
 /ws/verdesoto/u1/Workshops/WS10SalesApp/SalesApp/nbproject/private/
 /ws/verdesoto/u1/Workshops/WS10SalesApp/SalesApp/build/
+=======
+>>>>>>> 2a8c9a2d0049d6cc5e7bd82656a38855dd63bc9e
+>>>>>>> cae4dd2bc58a22b7063ef902f208382dc6a74ec5

@@ -1,0 +1,4 @@
+{"students":[
+{"id":0, "name":"Jhordy Marcillo", "age":19, "average":4.00, "isWorking":true,"parents":[{"name":"Saide"},{"name":"Freddy"}]},
+{"id":0, "name":"Jhordy Marcillo", "age":19, "average":4.00, "isWorking":true}
+]}

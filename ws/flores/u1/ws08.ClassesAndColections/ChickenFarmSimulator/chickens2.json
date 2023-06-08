@@ -1,0 +1,124 @@
+[
+  {
+    "id": 6,
+    "age": 0,
+    "name": "Bella",
+    "color": "white",
+    "isMolting": false,
+    "bornOnDate": "Jun 25, 2023, 12:00:00 AM"
+  },
+  {
+    "id": 7,
+    "age": 13,
+    "name": "Rocky",
+    "color": "bk\u0026wh",
+    "isMolting": true,
+    "bornOnDate": "Jul 19, 2010, 12:00:00 AM"
+  },
+  {
+    "id": 8,
+    "age": 6,
+    "name": "Luna",
+    "color": "gray",
+    "isMolting": false,
+    "bornOnDate": "Jul 18, 2017, 12:00:00 AM"
+  },
+  {
+    "id": 9,
+    "age": 23,
+    "name": "Daisy",
+    "color": "yellow",
+    "isMolting": false,
+    "bornOnDate": "Aug 1, 2000, 12:00:00 AM"
+  },
+  {
+    "id": 10,
+    "age": 23,
+    "name": "JuanaMartaIgnacia",
+    "color": "pink",
+    "isMolting": true,
+    "bornOnDate": "Jul 10, 2000, 12:00:00 AM"
+  }
+][
+  {
+    "id": 6,
+    "age": 20,
+    "name": "Bella",
+    "color": "white",
+    "isMolting": false,
+    "bornOnDate": "Mar 30, 2003, 12:00:00 AM"
+  },
+  {
+    "id": 7,
+    "age": 16,
+    "name": "Rocky",
+    "color": "bk\u0026wh",
+    "isMolting": true,
+    "bornOnDate": "Apr 23, 2007, 12:00:00 AM"
+  },
+  {
+    "id": 8,
+    "age": 1,
+    "name": "Luna",
+    "color": "gray",
+    "isMolting": false,
+    "bornOnDate": "Mar 11, 2022, 12:00:00 AM"
+  },
+  {
+    "id": 9,
+    "age": 4,
+    "name": "Daisy",
+    "color": "yellow",
+    "isMolting": false,
+    "bornOnDate": "May 16, 2019, 12:00:00 AM"
+  },
+  {
+    "id": 10,
+    "age": 6,
+    "name": "JuanaMartaIgnacia",
+    "color": "pink",
+    "isMolting": true,
+    "bornOnDate": "Aug 17, 2017, 12:00:00 AM"
+  }
+][
+  {
+    "id": 6,
+    "age": 6,
+    "name": "Bella",
+    "color": "white",
+    "isMolting": false,
+    "bornOnDate": "Feb 12, 2017, 12:00:00 AM"
+  },
+  {
+    "id": 7,
+    "age": 1,
+    "name": "Rocky",
+    "color": "bk\u0026wh",
+    "isMolting": true,
+    "bornOnDate": "Apr 11, 2022, 12:00:00 AM"
+  },
+  {
+    "id": 8,
+    "age": 19,
+    "name": "Luna",
+    "color": "gray",
+    "isMolting": false,
+    "bornOnDate": "Jan 11, 2004, 12:00:00 AM"
+  },
+  {
+    "id": 9,
+    "age": 16,
+    "name": "Daisy",
+    "color": "yellow",
+    "isMolting": false,
+    "bornOnDate": "Dec 15, 2007, 12:00:00 AM"
+  },
+  {
+    "id": 10,
+    "age": 10,
+    "name": "JuanaMartaIgnacia",
+    "color": "pink",
+    "isMolting": true,
+    "bornOnDate": "Jul 30, 2013, 12:00:00 AM"
+  }
+]

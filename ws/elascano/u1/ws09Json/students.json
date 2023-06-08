@@ -1,0 +1,5 @@
+{"students":[
+{ "id":0,"name":"Edison Lascano","age":52,"average":4.00,"isWorking":true,"parents":[{"name":"Isabel"},{"name":"Isabel"}]},
+{ "id":0,"name":"Edison Lascano","age":52,"average":4.00,"isWorking":true}
+]}
+

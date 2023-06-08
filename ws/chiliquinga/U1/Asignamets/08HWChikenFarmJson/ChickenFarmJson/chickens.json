@@ -1,0 +1,28 @@
+{
+  "id": 2,
+  "name": "Maria",
+  "color": "blue",
+  "age": 30,
+  "isMolting": true
+}
+{
+  "id": 3,
+  "name": "Lucia",
+  "color": "black",
+  "age": 14,
+  "isMolting": false
+}
+{
+  "id": 1,
+  "name": "Carmen",
+  "color": "red",
+  "age": 24,
+  "isMolting": true
+}
+{
+  "id": 4,
+  "name": "Vanessa",
+  "color": "white",
+  "age": 20,
+  "isMolting": false
+}

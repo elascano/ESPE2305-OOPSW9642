@@ -2,7 +2,6 @@
 
 package ec.edu.espe.view;
 
-import ec.edu.espe.mode.info;
 import java.util.Scanner;
 
 
@@ -15,7 +14,6 @@ import java.util.Scanner;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package ec.edu.espe.mode;
 
 /**
  *

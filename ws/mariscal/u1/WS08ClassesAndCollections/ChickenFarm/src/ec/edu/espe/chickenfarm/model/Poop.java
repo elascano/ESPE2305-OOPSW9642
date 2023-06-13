@@ -2,7 +2,7 @@ package ec.edu.espe.chickenfarm.model;
 
 /**
  *
- * @author Ruben Benavides, Jsons, DCCO-ESPE
+ * @author Mesias Mariscal, Jsons, DCCO-ESPE
  */
 public class Poop {
     private int id;

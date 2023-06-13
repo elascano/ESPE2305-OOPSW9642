@@ -67,29 +67,9 @@ public class TrafficMenu {
         System.out.print("Enter the number of Trucks: ");
         String trucks = scanner.next();
 
-        Traffic traffic = new Traffic();
-        
-
-        
-        if (traffic.contains(traffic)) {
-            System.out.println("Car already exists.");
-        } else {
-            traffic.add(traffic);
-            System.out.println("Car added successfully!");
-        }
+        //Traffic traffic = new Traffic();
 
         System.out.println();
-    }
-    
-        private static void loadTraffic() {
-        try (Reader reader = new FileReader(FILENAME)) {
-            Type listType = new TypeToken<List<Traffic>>(){}.getType();
-            traffic = gson.fromJson(reader, listType);
-        } catch (FileNotFoundException e) {
-            // File doesn't exist, ignore
-        } catch (IOException e) {
-            System.out.println("Error reading cars from JSON file.");
-        }
     }
 
     private static void saveTraffic() {

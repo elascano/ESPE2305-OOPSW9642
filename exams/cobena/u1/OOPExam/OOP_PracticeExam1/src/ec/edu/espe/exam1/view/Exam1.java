@@ -2,7 +2,6 @@ package ec.edu.espe.exam1.view;
 
 import ec.edu.espe.exam1.model.JsonFile;
 import ec.edu.espe.exam1.model.Sport;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,7 +11,6 @@ import java.util.Scanner;
 public class Exam1 {
     public static void main(String[] args) {
         Scanner keyboardInput = new Scanner(System.in);
-        ArrayList<Sport> sports;
         JsonFile jsonFile = new JsonFile("Sports");
         Sport sport = new Sport();
         
@@ -24,7 +22,7 @@ public class Exam1 {
             option = keyboardInput.nextInt();
             
             switch (option) {
-                case 1:
+                case 1 -> {
                     System.out.println("Input the sport id");
                     sport.setId(keyboardInput.nextInt());
                     System.out.println("Input the sport name");
@@ -34,9 +32,8 @@ public class Exam1 {
                     sport.setTournaments(keyboardInput.next());
                     
                     jsonFile.write(sport);
-                    break;
-                case 2:
-                    jsonFile.deleteAllSaved();
+                }
+                case 2 -> jsonFile.deleteAllSaved();
             }
             
         }while(option!=3);

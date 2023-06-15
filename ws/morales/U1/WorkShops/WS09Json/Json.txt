@@ -1,3 +1,0 @@
-{"id":0, "name": "Anthony Morales", "age": 20, "average": 4.00, "isworking": true}
-
-{"students":[{"id":0, "name":"Anthony Morales", "age": 20, "average": 4.00, "isworking": true, "parents":[{"name":"Wilmer"},{"name":"Edibety"}]}, {"id":1, "name":"Anthony Morales", "age": 20, "average": 4.00, "isworking": true, "parents":[{"name":"Wilmer"},{"name":"Edibety"}]}]}

@@ -25,6 +25,7 @@ public class VideogameSalesSystem {
         Owner owner;
         double salary;
         double annualSalary;
+        double netSalary;
         double totalSalary;
         double taxesToPay;
       

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "50 sombras de josue",
+    "author": "josue",
+    "editorial": "josuesito",
+    "price": 2.0
+  },
+  {
+    "id": 2,
+    "name": "50 sombras de Jeffrey",
+    "author": "Jeffrey",
+    "editorial": "jeffrecityo",
+    "price": 50.0
+  },
+  {
+    "id": 4,
+    "name": "josue",
+    "author": "josuei",
+    "editorial": "ferch",
+    "price": 40.0
+  }
+]

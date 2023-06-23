@@ -1,4 +1,0 @@
-{"students":[
-{"id": 1, "name" : "Pablo Carrera" , "age":20,"average":2.00,"isWorking":true, "parents":[{"mother":"Myriam"},{"father":"Eduardo"}]},
-{"id": 0, "name" : "Edison Lascano" , "age":52,"average":4.00,"isWorking":true}
-]}

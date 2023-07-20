@@ -134,6 +134,7 @@ replay_pid*
 /ws/manobanda/u2/Ws16-Libraries/Tax/dist/
 /ws/manobanda/u2/Ws16-Libraries/Tax/build/
 >>>>>>> 7f159b678799511c31b506ba543df3d45a8b214b
+<<<<<<< HEAD
 /ws/tipan/u2/WS16Libraries/Drivers/target/
 /ws/tipan/u2/WS16Libraries/JavaMongoDB/target/
 /ws/tipan/u2/WS16Libraries/MongoDBInfoPrinter/target/
@@ -151,3 +152,6 @@ replay_pid*
 /ws/tipan/u2/WS20UnitTest/SeriesMath/SeriesMath/target/
 /ws/tipan/u2/New Folder (2)/Contacts/nbproject/private/
 /ws/tipan/u2/New Folder (2)/Contacts/build/
+=======
+/exams/manobanda/U2/Question 38-51/Question38-51/nbproject/private/
+>>>>>>> 85c6a39fa50099fd10d6c2b7be375983233b0e2e

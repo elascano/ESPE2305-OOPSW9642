@@ -26,7 +26,7 @@ public class DatabaseManager {
     public static MongoDatabase connectToDatabase(String uri, String dataBase){
         MongoClient mongoClient = MongoClients.create(uri);
         MongoDatabase mongoDatabase = mongoClient.getDatabase(dataBase);
-        System.out.println("-> Connected successfully to server " + dataBase);  
+                JOptionPane.showMessageDialog(null, "Data Base Conected.");
         return mongoDatabase;
     }
     
@@ -44,7 +44,7 @@ public class DatabaseManager {
                 JOptionPane.showMessageDialog(null, "Added");
                 return true;
             } catch (Exception e) {
-                System.out.println("-> Insertion failed");
+                JOptionPane.showMessageDialog(null, "We couldn't added the new Smart Watch");
                 return false;
             }
         }else{
@@ -94,11 +94,9 @@ public class DatabaseManager {
         if (existsDocument(collection, searchField, searchValue)) {
             Bson query =Filters.eq(searchField, searchValue);
             collection.deleteOne(query);
-            System.out.println("-> Deleted successfully");
             return true; 
         }
         else {
-            System.out.println("-> Deleted failed");
             return false;
         }
     }

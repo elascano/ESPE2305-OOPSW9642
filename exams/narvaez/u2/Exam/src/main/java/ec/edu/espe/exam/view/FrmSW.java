@@ -63,6 +63,12 @@ public class FrmSW extends javax.swing.JFrame {
 
         jLabel6.setText("Color:");
 
+        txtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdActionPerformed(evt);
+            }
+        });
+
         txtBrand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBrandActionPerformed(evt);
@@ -210,13 +216,17 @@ public class FrmSW extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtPriceActionPerformed
 
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdActionPerformed
+
     private SmartWatch read(){
         int id = Integer.parseInt(txtId.getText());
         String brand = txtBrand.getText();
         String color = txtColor.getText();
-        int price = Integer.parseInt(TxtPrice.getText().toString());
+        int price = Integer.parseInt(TxtPrice.getText());
         
-        return new SmartWatch(id, brand, color, id);
+        return new SmartWatch(id, brand, color, price);
     }
     
     

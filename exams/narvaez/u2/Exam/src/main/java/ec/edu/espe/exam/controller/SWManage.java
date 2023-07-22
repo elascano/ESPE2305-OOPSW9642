@@ -1,10 +1,14 @@
 
 package ec.edu.espe.exam.controller;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.result.DeleteResult;
 import ec.edu.espe.exam.model.SmartWatch;
 import ec.edu.espe.exam.utils.DatabaseManager;
 import java.util.ArrayList;
 import java.util.HashMap;
+import org.bson.Document;
+import org.bson.conversions.Bson;
 
 /**
  *
@@ -13,6 +17,7 @@ import java.util.HashMap;
 public class SWManage {
     DatabaseController database;
     MongoCollection collection;
+    String searchField;
     
     private static SWManage instance;
     
@@ -36,7 +41,20 @@ public class SWManage {
     protected Object clone() throws CloneNotSupportedException {
         throw new CloneNotSupportedException();
     }
-    
+    public boolean delete(int id) {
+        Bson query = Filters.eq("Id", id);
+        DeleteResult result = collection.deleteOne(query);
+        return result.getDeletedCount() > 0;
+    }
+
+    public MongoCollection<Document> getCollection() {
+        return this.collection;
+    }
+    private boolean existsDocument(MongoCollection<HashMap<Object, Object>> collection, Bson query) {
+        return collection.find(query).first() != null;
+    }
+
+
     public void save(SmartWatch smartwatch){
         DatabaseManager.insertDocument(collection, smartwatch.getData());
     }
@@ -59,9 +77,9 @@ public class SWManage {
             String brand = map.get("Brand").toString();
             int id = Integer.parseInt(map.get("Id").toString());
             String color = map.get("Color").toString();
-            int price = Integer.parseInt(map.get(id).toString());
+            int price = Integer.parseInt(map.get("Price").toString());
             
-            SmartWatch smartwatch = new SmartWatch(id, brand, color, id);
+            SmartWatch smartwatch = new SmartWatch(id, brand, color, price);
             
             if(smartwatch != null){
                 smartwatchs.add(smartwatch);

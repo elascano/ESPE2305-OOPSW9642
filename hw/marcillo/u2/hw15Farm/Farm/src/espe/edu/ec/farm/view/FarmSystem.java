@@ -1,10 +1,14 @@
 package espe.edu.ec.farm.view;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import espe.edu.ec.farm.model.Chicken;
 import espe.edu.ec.farm.model.Cow;
 import espe.edu.ec.farm.model.FarmAnimal;
 import espe.edu.ec.farm.model.Meat;
 import espe.edu.ec.farm.model.Pig;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Date;
 
 /**
@@ -36,7 +40,8 @@ public class FarmSystem {
        Cow cow = (Cow) farmAnimal;
        meat.setPounds(3);
        System.out.println("Cow ate: " + cow.produce(meat));
-   } 
+
+    } 
 
     private static void printTypeAndAnimal(FarmAnimal farmAnimal) {
         System.out.println("------------------------");

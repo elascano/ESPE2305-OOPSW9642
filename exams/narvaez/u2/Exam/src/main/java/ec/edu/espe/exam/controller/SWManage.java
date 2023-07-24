@@ -19,6 +19,7 @@ public class SWManage {
     MongoCollection collection;
     String searchField;
     
+  
     private static SWManage instance;
     
     private SWManage() {
@@ -54,7 +55,13 @@ public class SWManage {
         return collection.find(query).first() != null;
     }
 
-
+    public void updateDocument(int id, String targetField, Object newValue) {
+        if (DatabaseManager.updateDocument(collection, "Id", id, targetField, newValue)) {
+            System.out.println("Document updated successfully");
+        } else {
+            System.out.println("Document update failed");
+        }
+    }
     public void save(SmartWatch smartwatch){
         DatabaseManager.insertDocument(collection, smartwatch.getData());
     }
@@ -63,8 +70,9 @@ public class SWManage {
         HashMap<Object,Object> smartwatchMap = DatabaseManager.obtain(collection, id);
         String brand = smartwatchMap.get("Brand").toString();
         String color = smartwatchMap.get("Color").toString();
+        int price = Integer.parseInt(smartwatchMap.get("Price").toString());
 
-        return new SmartWatch(id, brand, color, id);
+        return new SmartWatch(id, brand, color, price);
     }
     
     public ArrayList<SmartWatch> obtainAll(){
@@ -87,4 +95,13 @@ public class SWManage {
         }
         return smartwatchs;
     }
+
+    public SmartWatch getSmartWatchById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public boolean update(int price) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
 }

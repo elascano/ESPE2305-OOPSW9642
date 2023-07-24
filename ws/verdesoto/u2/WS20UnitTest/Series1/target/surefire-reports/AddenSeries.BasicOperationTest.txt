@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: AddenSeries.BasicOperationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec <<< FAILURE!
+AddenSeries.BasicOperationTest.testSubtruct()  Time elapsed: 0.007 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.8> but was: <9.2>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at AddenSeries.BasicOperationTest.testSubtruct(BasicOperationTest.java:62)
+

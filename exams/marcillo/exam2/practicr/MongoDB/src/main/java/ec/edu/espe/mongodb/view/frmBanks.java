@@ -39,7 +39,7 @@ public class frmBanks extends javax.swing.JFrame {
     private String company;
     private double price;
     private int selectedRow;
-    Banks bank;
+    Banks banks;
     
     /**
      * Creates new form frmStereo
@@ -50,8 +50,8 @@ public class frmBanks extends javax.swing.JFrame {
                 .applyConnectionString(connectionString)
                 .build();
         mongoClient = MongoClients.create(settings);
-        database = mongoClient.getDatabase("Stereo");
-        collection = database.getCollection("Stereo");
+        database = mongoClient.getDatabase("Banks");
+        collection = database.getCollection("Users");
         initComponents();
         this.setLocationRelativeTo(null);
         tableModel = (DefaultTableModel) tbBanks.getModel(); 
@@ -81,6 +81,7 @@ public class frmBanks extends javax.swing.JFrame {
         txtCount = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbBanks = new javax.swing.JTable();
+        btnAdd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -97,12 +98,18 @@ public class frmBanks extends javax.swing.JFrame {
 
         lbNAME.setText("NAME");
 
-        lbCOUNT.setText("COUNT");
+        lbCOUNT.setText("PRICE");
 
         lbIVA.setText("IVA");
 
         tbBanks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -113,6 +120,13 @@ public class frmBanks extends javax.swing.JFrame {
             }
         ));
         jScrollPane2.setViewportView(tbBanks);
+
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,22 +146,24 @@ public class frmBanks extends javax.swing.JFrame {
                             .addComponent(txtIva, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCount, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1))
+                            .addComponent(txtCount, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnShow)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAdd)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(308, 308, 308)
+                        .addComponent(jLabel1)))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(8, 8, 8)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -168,49 +184,101 @@ public class frmBanks extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnShow)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnAdd)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowActionPerformed
+    displayAllData();
+    }//GEN-LAST:event_btnShowActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+    String cell1 = txtID.getText();
+    String cell2 = txtName.getText();
+    String cell3 = txtIva.getText();
+    String cell4 = txtCount.getText();
+    if (cell1.isEmpty() || cell2.isEmpty() || cell3.isEmpty() || cell4.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Debe llenar todas las celdas", "Error", JOptionPane.ERROR_MESSAGE);
+    } else {
+        int id = Integer.parseInt(cell1);
+        String name = cell2;
+        int iva = Integer.parseInt(cell3);
+        int count = Integer.parseInt(cell4); 
+        readData();
+
+        // Crear un nuevo objeto Banks con los valores ingresados
+        Banks newBank = new Banks(id, name, iva, count);
+
+        StringBuilder confirmationMessage = appendItems(newBank);
+        int option = JOptionPane.showConfirmDialog(this, confirmationMessage.toString());
+
+        if (option == JOptionPane.YES_OPTION) {
+            Gson gson = new Gson();
+            String json = gson.toJson(newBank);
+            Document document = Document.parse(json);
+            collection.insertOne(document);
+            JOptionPane.showMessageDialog(rootPane, "Guardado");
+            
+            // Actualizamos la tabla con todos los datos, incluido el nuevo dato
+            displayAllData();
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Cancelado");
+        }
+    }
+    }//GEN-LAST:event_btnAddActionPerformed
+
+
+
+    
+    private StringBuilder appendItems(Banks newBank) {
+        StringBuilder confirmationMessage = new StringBuilder();
+        confirmationMessage.append("Estas seguro de ingresar el siguiente producto?").append("\n\n");
+        confirmationMessage.append("ID: ").append(banks.getId()).append("\n");
+        confirmationMessage.append("Name: ").append(banks.getName()).append("\n");
+        confirmationMessage.append("Count: ").append(banks.getCount()).append("\n"); // Actualizar el campo "company" como String
+        confirmationMessage.append("Iva: ").append(banks.getIva()).append("\n");
+        
+
+        return confirmationMessage;
+}
+    
+    private void readData() throws NumberFormatException {
+    int id;
+    String name;
+    int iva;
+    int count;
+
+    id = Integer.parseInt(txtID.getText());
+    name = txtName.getText();
+    iva = Integer.parseInt(txtIva.getText());
+    count = Integer.parseInt(txtCount.getText());
+
+    banks = new Banks(id, name, iva, count);
+}
+
+    private void addToTable(Banks stereo) {
+        Object[] row = {banks.getId(), banks.getName(), banks.getCount(), banks.getIva()};
+        tableModel.addRow(row);
+    }
+    
+    private void displayAllData() {
     MongoCursor<Document> cursor = collection.find().iterator();
     tableModel.setRowCount(0);
     while (cursor.hasNext()) {
         Document document = cursor.next();
         int id = document.getInteger("id");
         String name = document.getString("name");
-        // Corregir el campo que obtienes del documento, debe ser "iva" en lugar de "company"
-        String iva = document.getString("iva");
-        double price = document.getDouble("price");
-        Object[] row = {id, name, iva, price}; // Usar "iva" en lugar de "company" en el arreglo de objetos
+        int iva = document.getInteger("iva");
+        int price = document.getInteger("price");
+
+        Object[] row = {id, name, iva, price}; 
         tableModel.addRow(row);
     }
-    }//GEN-LAST:event_btnShowActionPerformed
-
-
-
-    
-    private StringBuilder appendItems() {
-        StringBuilder confirmationMessage = new StringBuilder();
-        confirmationMessage.append("Estas seguro de ingresar el siguiente producto?").append("\n\n");
-        confirmationMessage.append("ID: ").append(bank.getId()).append("\n");
-        confirmationMessage.append("Name: ").append(bank.getName()).append("\n");
-        confirmationMessage.append("Count: ").append(bank.getCount()).append("\n"); // Actualizar el campo "company" como String
-        confirmationMessage.append("Iva: ").append(bank.getIva()).append("\n");
-
-        return confirmationMessage;
 }
-    
-    
-
-
-    private void addToTable(Banks stereo) {
-        Object[] row = {bank.getId(), bank.getName(), bank.getCount(), bank.getIva()};
-        tableModel.addRow(row);
-    }
-    
 
     /**
      * @param args the command line arguments
@@ -249,6 +317,7 @@ public class frmBanks extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnShow;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

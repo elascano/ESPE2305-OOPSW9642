@@ -1,0 +1,34 @@
+[
+  {
+    "isMolthing": false,
+    "laidEggs": 0,
+    "id": 1,
+    "breed": "broiled",
+    "bornOn": "Jun 28, 2023, 12:08:24 AM"
+  },
+  {
+    "id": 3,
+    "breed": "Landrace",
+    "bornOn": "Jun 28, 2023, 12:08:24 AM"
+  },
+  {
+    "isMolthing": true,
+    "laidEggs": 0,
+    "id": 1,
+    "breed": "Bronze",
+    "bornOn": "Jun 28, 2023, 12:08:24 AM"
+  },
+  {
+    "isProducingMilk": true,
+    "id": 0,
+    "breed": "Abigar",
+    "bornOn": "Jun 28, 2023, 12:08:24 AM"
+  },
+  {
+    "color": "Black",
+    "lastSheering": "Jun 28, 2023, 12:08:24 AM",
+    "id": 0,
+    "breed": "Merino",
+    "bornOn": "Jun 28, 2023, 12:08:24 AM"
+  }
+]

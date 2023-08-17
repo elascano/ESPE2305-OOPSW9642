@@ -1,6 +1,8 @@
-C:\Users\DELL\Desktop\CellPhonesSystem\src\main\java\ec\edu\espe\cellphonesystem\model\CellPhone.java
-C:\Users\DELL\Desktop\CellPhonesSystem\src\main\java\ec\edu\espe\cellphonesystem\utils\JsonManager.java
-C:\Users\DELL\Desktop\CellPhonesSystem\src\main\java\ec\edu\espe\cellphonesystem\view\Main.java
-C:\Users\DELL\Desktop\CellPhonesSystem\src\main\java\ec\edu\espe\cellphonesystem\controller\CellPhoneController.java
-C:\Users\DELL\Desktop\CellPhonesSystem\src\main\java\ec\edu\espe\cellphonesystem\utils\DbConnectionManager.java
-C:\Users\DELL\Desktop\CellPhonesSystem\src\main\java\ec\edu\espe\cellphonesystem\view\FrmInsertCellphone.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/utils/JsonManager.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/controller/CellPhoneController.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/view/Main.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/model/CellPhone.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/view/FrmInsertCellphone.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/utils/TableManager.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/view/NewJFrame.java
+/home/yeshualinux/Dropbox/OOPrograming/ESPE2305-OOPSW9642/exams/carrera/u2/Q71-100ExecutableCode/CellPhonesSystem/src/main/java/ec/edu/espe/cellphonesystem/utils/DbConnectionManager.java

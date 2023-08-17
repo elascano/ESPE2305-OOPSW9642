@@ -47,6 +47,8 @@ public class FrmSortingApp extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btnSort = new javax.swing.JButton();
         brnClean = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtAlgorithm = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -96,6 +98,15 @@ public class FrmSortingApp extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Algorithm used: ");
+
+        txtAlgorithm.setEditable(false);
+        txtAlgorithm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAlgorithmActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -117,7 +128,12 @@ public class FrmSortingApp extends javax.swing.JFrame {
                         .addComponent(brnClean))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(118, 118, 118)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtAlgorithm, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -130,14 +146,21 @@ public class FrmSortingApp extends javax.swing.JFrame {
                 .addGap(3, 3, 3)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSort)
-                    .addComponent(brnClean))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSort)
+                            .addComponent(brnClean))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(txtAlgorithm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         jMenuBar1.setBackground(new java.awt.Color(204, 153, 255));
@@ -209,6 +232,18 @@ public class FrmSortingApp extends javax.swing.JFrame {
 
         String sortStrategy = context.getSortStrategy().getClass().getSimpleName();
 
+        String algorithmUsed = "";
+        
+        if (sortStrategy.equals("BubbleSort")) {
+            algorithmUsed = "BubbleSort";
+        } else if (sortStrategy.equals("InsertionSort")) {
+            algorithmUsed = "InsertionSort";
+        } else if (sortStrategy.equals("QuickSort")) {
+            algorithmUsed = "QuickSort";
+        }
+
+        txtAlgorithm.setText(algorithmUsed);
+        
         ArrayList<Integer> sortArr = new ArrayList<>();
 
         for (int i = 0; i < sortedNumbers.length; i++) {
@@ -222,12 +257,18 @@ public class FrmSortingApp extends javax.swing.JFrame {
                 .append("sorted", sortArr.toString());
 
         addSortCase(sortDocument);
+        
+        
     }//GEN-LAST:event_btnSortActionPerformed
 
     private void brnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brnCleanActionPerformed
         txtSortedNumbers.setText("");
         txtEnterNumbers.setText("");
     }//GEN-LAST:event_brnCleanActionPerformed
+
+    private void txtAlgorithmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAlgorithmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAlgorithmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,6 +293,7 @@ public class FrmSortingApp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -259,6 +301,7 @@ public class FrmSortingApp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField txtAlgorithm;
     private javax.swing.JTextArea txtEnterNumbers;
     private javax.swing.JTextArea txtSortedNumbers;
     // End of variables declaration//GEN-END:variables

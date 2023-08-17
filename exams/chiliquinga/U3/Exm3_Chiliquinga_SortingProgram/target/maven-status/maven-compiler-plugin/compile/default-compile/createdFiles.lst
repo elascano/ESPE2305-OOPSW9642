@@ -1,6 +1,7 @@
 ec/edu/espe/sortingProgram/controller/MongoConnection.class
 ec/edu/espe/sortingProgram/model/SortingContext.class
 ec/edu/espe/sortingProgram/model/BubbleSort.class
+ec/edu/espe/sorgingProgram/view/FrmSortingApp$6.class
 ec/edu/espe/sorgingProgram/view/FrmSortingApp$1.class
 ec/edu/espe/sorgingProgram/view/FrmSortingApp$4.class
 ec/edu/espe/sorgingProgram/view/FrmSortingApp.class

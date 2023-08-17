@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Computer" package="utils" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="serialNumber" type="int" visibility="private"/>
+        <Field name="year" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="model"/>
+          <Argument type="int" name="serialNumber"/>
+          <Argument type="int" name="year"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ComputerStore" package="utils" visibility="public" xPosition="472.0" yPosition="330.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FileManager" package="utils" visibility="public" xPosition="127.0" yPosition="330.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="displayMenu" returnType="void" visibility="public"/>
+        <Method name="serializeObject" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="deserializeObject" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

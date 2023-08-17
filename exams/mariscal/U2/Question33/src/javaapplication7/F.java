@@ -10,5 +10,11 @@ package javaapplication7;
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
 public class F {
+    @Override
+    public String toString() {  
+        return "F{" + '}';
+    }
 
+    
+    
 }

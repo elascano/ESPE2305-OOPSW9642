@@ -11,4 +11,9 @@ package javaapplication7;
  */
 public class E {
 
+    @Override
+    public String toString() {  
+        return "E{" + '}';
+    }
+   
 }

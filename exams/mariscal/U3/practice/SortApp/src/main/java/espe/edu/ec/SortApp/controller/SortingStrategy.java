@@ -3,17 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package javaapplication7;
+package espe.edu.ec.SortApp.controller;
 
 /**
  *
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
-public class E {
-
-    @Override
-    public String toString() {  
-        return "E{" + '}';
-    }
-   
+public abstract class SortingStrategy {
+    public abstract void sort();
 }

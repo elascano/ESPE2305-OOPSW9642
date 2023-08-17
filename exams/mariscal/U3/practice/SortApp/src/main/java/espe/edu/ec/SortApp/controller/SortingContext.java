@@ -3,25 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package javaapplication7;
+package espe.edu.ec.SortApp.controller;
 
 /**
  *
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
-public class G {
-    @Override             
-    public J m() {
-        return new J();
+public class SortingContext {
+    private SortingStrategy sortStrategy;
+
+    public void setSortStrategy(SortingStrategy sortStrategy) {
+        this.sortStrategy = sortStrategy;
     }
 
-    @Override
-    public void m(J j) {    
-        System.out.println("running method m(J j) with j -> " + j);
+    public void sort() {
+        sortStrategy.sort();
     }
-
-    public G() {
-    }
-
-    
 }

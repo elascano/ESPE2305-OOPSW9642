@@ -4,8 +4,13 @@
  */
 package com.jsons.strategyfinalexam.view;
 
+import com.jsons.strategyfinalexam.controller.ArrayController;
+import com.jsons.strategyfinalexam.controller.BubbleSort;
+import com.jsons.strategyfinalexam.controller.QuickSort;
 import com.jsons.strategyfinalexam.controller.SortingContext;
+import com.jsons.strategyfinalexam.model.Array;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,8 +18,11 @@ import java.awt.Color;
  */
 public class Sort extends javax.swing.JFrame {
 
+    Array array = new Array();
     String nums;
+    int[] unsorted;
     int[] numsToSort;
+    ArrayController arrayController = new ArrayController();
     
     /**
      * Creates new form Sort
@@ -35,39 +43,37 @@ public class Sort extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtField = new javax.swing.JTextField();
-        btnBubble = new javax.swing.JButton();
-        btnQuick = new javax.swing.JButton();
-        btnInsertion = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnSort = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         lblWarning = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        lblConfirmation = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Sorting System");
 
         txtField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtFieldKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtFieldKeyTyped(evt);
             }
         });
 
-        btnBubble.setText("Bubble");
-        btnBubble.addActionListener(new java.awt.event.ActionListener() {
+        btnSort.setText("Sort");
+        btnSort.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBubbleActionPerformed(evt);
+                btnSortActionPerformed(evt);
             }
         });
 
-        btnQuick.setText("Quick");
-
-        btnInsertion.setText("Insertion");
-
-        jButton1.setText("Add");
-        jButton1.setEnabled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setText("Add");
+        btnAdd.setEnabled(false);
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
@@ -84,21 +90,20 @@ public class Sort extends javax.swing.JFrame {
                 .addGap(149, 149, 149))
             .addComponent(txtField, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnBubble)
-                .addGap(79, 85, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnQuick)
-                        .addGap(77, 77, 77)
-                        .addComponent(btnInsertion))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(153, 153, 153))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(lblWarning, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnAdd)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnSort)
+                        .addGap(152, 152, 152))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,14 +115,13 @@ public class Sort extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtField, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAdd)
+                    .addComponent(lblConfirmation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblWarning, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBubble)
-                    .addComponent(btnQuick)
-                    .addComponent(btnInsertion)))
+                .addGap(41, 41, 41)
+                .addComponent(btnSort))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -140,33 +144,84 @@ public class Sort extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFieldKeyTyped
+        
+    }//GEN-LAST:event_txtFieldKeyTyped
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        numsToSort = getArray(nums);
+        unsorted = getArray(nums);
+        array.setUnsorted(unsorted);
+        JOptionPane.showMessageDialog(rootPane, "Added!");
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortActionPerformed
+        int n = numsToSort.length;
+        SortingContext sortingContext = new SortingContext();
+        if(n>1 && n <6){
+            sortingContext.setSortStrategy(n);
+            array.setSortAlgorithm("Bubble");
+            numsToSort = sortingContext.sort(numsToSort);
+            array.setSorted(numsToSort);
+            JOptionPane.showMessageDialog(rootPane, "Sorted by Bubble. Check DataBase!");
+            arrayController.add(array);
+        }
+        
+        if(n>=6 && n<11){
+            sortingContext.setSortStrategy(n);
+            array.setSortAlgorithm("Insertion");
+            numsToSort = sortingContext.sort(numsToSort);
+            array.setSorted(numsToSort);
+            JOptionPane.showMessageDialog(rootPane, "Sorted by Insertion. Check DataBase!");
+            arrayController.add(array);
+        }
+        
+        if(n>11){
+            sortingContext.setSortStrategy(n);
+            array.setSortAlgorithm("Quick");
+            numsToSort = sortingContext.sort(numsToSort);
+            array.setSorted(numsToSort);
+            JOptionPane.showMessageDialog(rootPane, "Sorted by Quick. Check DataBase!");
+            arrayController.add(array);
+        }
+    }//GEN-LAST:event_btnSortActionPerformed
+
+    private void txtFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFieldKeyReleased
         char keyTyped = evt.getKeyChar();
+        btnAdd.setEnabled(false);
         if (!Character.isDigit(keyTyped) && keyTyped != ',') {
             lblWarning.setText("Only numbers and commas");
             lblWarning.setForeground(Color.red);
+            lblWarning.setVisible(true);
+            if(verifyFields()){
+                btnAdd.setEnabled(false);
+            }
         }else{
-           nums = txtField.getText();
-           btnBubble.setEnabled(true);
+            lblWarning.setVisible(false);
+            if(verifyFields()){
+                btnAdd.setEnabled(true);
+                nums = txtField.getText();
+            }
         }
-    }//GEN-LAST:event_txtFieldKeyTyped
+    }//GEN-LAST:event_txtFieldKeyReleased
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        numsToSort = getArray(nums);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void btnBubbleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBubbleActionPerformed
-        SortingContext sortingContext = new SortingContext();
-        
-    }//GEN-LAST:event_btnBubbleActionPerformed
-
+    public boolean verifyFields(){
+        if(txtField.getText().isEmpty()){
+            return false;
+        }else{
+            if(txtField.getText().matches("^(-?\\d+(?:,-?\\d+)*)?$")){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+    
     public int[] getArray(String nums){
         String[] strNumbers = nums.split(",");
         int[] numbers = new int[strNumbers.length];
-
         for (int i = 0; i < strNumbers.length; i++) {
             numbers[i] = Integer.parseInt(strNumbers[i].trim());
         }
-
         return numbers;
     }
     
@@ -206,13 +261,12 @@ public class Sort extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBubble;
-    private javax.swing.JButton btnInsertion;
-    private javax.swing.JButton btnQuick;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnSort;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblConfirmation;
     private javax.swing.JLabel lblWarning;
     private javax.swing.JTextField txtField;
     // End of variables declaration//GEN-END:variables

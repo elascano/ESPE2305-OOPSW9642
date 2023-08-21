@@ -9,11 +9,9 @@ package com.jsons.strategyfinalexam.model;
  * @author Ruben Benavides, Jsons, DCCO-ESPE
  */
 public class Array {
-        private int unsorted[];
+    private int unsorted[];
     private int sorted[];
     private String sortAlgorithm;
-
-    
     
     public int[] getUnsorted() {
         return unsorted;

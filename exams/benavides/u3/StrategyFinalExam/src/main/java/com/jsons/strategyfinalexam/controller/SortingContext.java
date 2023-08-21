@@ -22,12 +22,12 @@ public class SortingContext {
             sortingStrategy = new BubbleSort();
         }
         
-        if(n>=6 && n<11){
-            //sortingStrategy = new InsertionSort();
+        if(n>=6 && n<=11){
+            sortingStrategy = new InsertionSort();
         }
         
         if(n>11){
-            //sortingStrategy = new QuickSort();
+            sortingStrategy = new QuickSort();
         }
         
         return sortingStrategy;

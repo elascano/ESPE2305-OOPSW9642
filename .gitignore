@@ -25,4 +25,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
 /exams/jumbo/U3/SortApp/target/
+=======
+/exams/manobanda/U3/AbstractFactory/target/
+/exams/manobanda/U3/AbstractFactory1/nbproject/private/
+/exams/manobanda/U3/AbstractFactory1/build/
+>>>>>>> 45d94b988ea5ff551233ca0703bd22aaa18c991f

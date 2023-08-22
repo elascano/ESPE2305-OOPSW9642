@@ -22,7 +22,7 @@ public class NumberController {
 
     private MongoCollection<Document> mongoCollection;
 
-    public NumbersController() {
+    public NumberController() {
         this.mongoCollection = mongoDatabase.getCollection("numbers");
     }
 
@@ -36,7 +36,7 @@ public class NumberController {
     }
 
     public Document createDocument(Numbers listDigits) {
-        Document document = new Document();
+        Document document = new Document() {};
         document.append("NumbersDisordered", Arrays.toString(listDigits.getNumbersDisordered()));
         document.append("ListOfDigits", listDigits.getSizeOfListOfNumbers());
         document.append("Algorithm", listDigits.getSortAlgorithm());

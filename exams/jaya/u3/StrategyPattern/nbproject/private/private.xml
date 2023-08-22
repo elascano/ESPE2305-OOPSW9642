@@ -3,15 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/view/FrmSortApp.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/controller/BubbleSort.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/controller/InsertionSort.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/controller/StrategyArray.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/controller/SortingContext.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/utils/DBManager.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/controller/FrmSortAppController.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/controller/SortingStrategy.java</file>
-            <file>file:/C:/Users/cajh1/OneDrive/Escritorio/StrategyPattern/src/ec/edu/espe/strategy/controller/QuickSort.java</file>
+            <file>file:/C:/Users/alexa/Desktop/Universidad/ESPE2305-OOPSW9642/exams/jaya/u3/StrategyPattern/src/ec/edu/espe/strategy/view/FrmSortApp.java</file>
         </group>
     </open-files>
 </project-private>

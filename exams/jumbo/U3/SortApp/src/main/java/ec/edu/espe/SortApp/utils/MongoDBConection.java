@@ -4,6 +4,10 @@
  */
 package ec.edu.espe.SortApp.utils;
 
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
+
 /**
  *
  * @author Alexander Jumbo

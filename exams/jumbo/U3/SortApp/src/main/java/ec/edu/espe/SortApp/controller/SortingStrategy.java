@@ -4,10 +4,12 @@
  */
 package ec.edu.espe.SortApp.controller;
 
+import ec.edu.espe.SortApp.model.Numbers;
+
 /**
  *
  * @author Alexander Jumbo
  */
 public class SortingStrategy {
-    
+    public void sort(Numbers listOfDigits) {};
 }

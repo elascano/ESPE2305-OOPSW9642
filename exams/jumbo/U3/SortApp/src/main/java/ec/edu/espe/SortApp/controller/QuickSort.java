@@ -13,6 +13,9 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
+    public QuickSort() {
+    }
+
     @Override
     
     public void sort(Numbers listOfDigits) {

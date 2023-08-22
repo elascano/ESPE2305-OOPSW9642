@@ -10,5 +10,18 @@ package javaapplication7;
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
 public class G {
+    @Override             
+    public J m() {
+        return new J();
+    }
 
+    @Override
+    public void m(J j) {    
+        System.out.println("running method m(J j) with j -> " + j);
+    }
+
+    public G() {
+    }
+
+    
 }

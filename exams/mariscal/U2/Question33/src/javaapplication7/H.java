@@ -10,5 +10,8 @@ package javaapplication7;
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
 public interface H {
+    public J m();           
+    public void m(J j);     
+   
 
 }

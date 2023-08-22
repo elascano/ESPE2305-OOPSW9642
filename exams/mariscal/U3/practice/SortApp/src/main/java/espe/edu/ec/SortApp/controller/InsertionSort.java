@@ -9,10 +9,19 @@ package espe.edu.ec.SortApp.controller;
  *
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
-public class InsertionSort extends SortingStrategy {
-
+public class InsertionSort implements SortingStrategy {
     @Override
-    public void sort() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public int[] sort(int data[]) {
+        int n = data.length;
+        for (int i = 1; i < n; ++i) {
+            int key = data[i];
+            int j = i - 1;
+            while (j >= 0 && data[j] > key) {
+                data[j + 1] = data[j];
+                j = j - 1;
+            }
+            data[j + 1] = key;
+        }
+        return data;
     }
 }

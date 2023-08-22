@@ -4,8 +4,11 @@
  */
 package espe.edu.ec.SortApp.view;
 
+import com.mongodb.client.MongoCollection;
+import espe.edu.ec.SortApp.controller.DatabaseConnection;
+import espe.edu.ec.SortApp.controller.Sorter;
 import java.util.Arrays;
-import javax.swing.JOptionPane;
+import org.bson.Document;
 
 /**
  *
@@ -128,48 +131,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderActionPerformed
     String input = txtNumbers.getText();
+    Sorter sorter = new Sorter();
+    int[] sortedNumbers = sorter.sortNumbers(input);
+    String sortedNumbersString = Arrays.toString(sortedNumbers);
+    txtTidy.setText(sortedNumbersString);
 
-    if (input != null && !input.isEmpty()) {
-        String[] numberStrings = input.split(",");
-        boolean allNumbersValid = true;
-
-        for (String numberString : numberStrings) {
-            if (!isValidNumber(numberString.trim())) {
-                allNumbersValid = false;
-                break;
-            }
-        }
-
-        if (allNumbersValid) {
-            int[] numbers = new int[numberStrings.length];
-            for (int i = 0; i < numberStrings.length; i++) {
-                numbers[i] = Integer.parseInt(numberStrings[i].trim());
-            }
-
-            Arrays.sort(numbers);
-
-            StringBuilder sortedNumbers = new StringBuilder();
-            for (int number : numbers) {
-                sortedNumbers.append(number).append(", ");
-            }
-            txtTidy.setText(sortedNumbers.toString());
-
-            JOptionPane.showMessageDialog(this, "Valid numbers entered and sorted.");
-        } else {
-            JOptionPane.showMessageDialog(this, "Please enter only valid numbers separated by commas.");
-        }
-    } else {
-        JOptionPane.showMessageDialog(this, "You must enter at least one number.");
-    }      
+    DatabaseConnection dbConnection = new DatabaseConnection("arrayMesias");
+    MongoCollection<Document> numbersCollection = dbConnection.getCollection();
+    Document numbersDocument = new Document("unsorted", input)
+            .append("sorted", sortedNumbersString);
+    numbersCollection.insertOne(numbersDocument); 
     }//GEN-LAST:event_btnOrderActionPerformed
-private boolean isValidNumber(String str) {
-    try {
-        Integer.parseInt(str);
-        return true;
-    } catch (NumberFormatException e) {
-        return false;
-    }
-}
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

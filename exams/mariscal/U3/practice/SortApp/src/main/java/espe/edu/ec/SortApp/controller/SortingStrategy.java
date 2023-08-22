@@ -9,6 +9,6 @@ package espe.edu.ec.SortApp.controller;
  *
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
-public abstract class SortingStrategy {
-    public abstract void sort();
+public interface SortingStrategy {
+    int[] sort(int data[]);
 }

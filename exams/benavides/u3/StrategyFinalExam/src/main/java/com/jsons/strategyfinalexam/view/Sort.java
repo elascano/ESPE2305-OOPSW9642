@@ -5,8 +5,7 @@
 package com.jsons.strategyfinalexam.view;
 
 import com.jsons.strategyfinalexam.controller.ArrayController;
-import com.jsons.strategyfinalexam.controller.BubbleSort;
-import com.jsons.strategyfinalexam.controller.QuickSort;
+
 import com.jsons.strategyfinalexam.controller.SortingContext;
 import com.jsons.strategyfinalexam.model.Array;
 import java.awt.Color;

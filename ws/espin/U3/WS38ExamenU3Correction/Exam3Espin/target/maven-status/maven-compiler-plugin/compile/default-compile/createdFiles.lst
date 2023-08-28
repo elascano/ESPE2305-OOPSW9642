@@ -1,0 +1,12 @@
+ec\edu\espe\sortingapp\controller\QuickSort.class
+ec\edu\espe\sortingapp\controller\InsertionSort.class
+ec\edu\espe\sortingapp\utils\ArrayConverter.class
+ec\edu\espe\sortingapp\controller\SortingStrategy.class
+ec\edu\espe\sortingapp\controller\BubbleSort.class
+ec\edu\espe\sortingapp\view\FrmSort$1.class
+ec\edu\espe\sortingapp\view\FrmSort.class
+ec\edu\espe\sortingapp\view\Main.class
+ec\edu\espe\sortingapp\controller\WriteOnDb.class
+ec\edu\espe\sortingapp\utils\DbConnectionManager.class
+ec\edu\espe\sortingapp\view\FrmSort$2.class
+ec\edu\espe\sortingapp\controller\SortingContext.class

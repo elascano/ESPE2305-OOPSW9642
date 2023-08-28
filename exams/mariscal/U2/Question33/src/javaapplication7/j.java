@@ -10,5 +10,9 @@ package javaapplication7;
  * @author Mesias Mariscal, CodeCrafters; DCCO-ESPE
  */
 public class j implements H{
-
+    @Override
+    public String toString() { 
+        return "J{" + '}';
+    }
+    
 }
